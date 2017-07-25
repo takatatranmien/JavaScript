@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<form method="get" action="">
+    入力: <input type="text" id="number" value="0"/>
+    <input type="button" value="Prinrt" onclick="print_SoSu()"/>
+</form>
+<div id="result">
+ 
+</div>
+<script>
+function check_sosu(n){
+	var flag=true;
+	if(n<2){
+	flag=false;
+	}
+	else if(n==2){
+		flag=true;
+	}
+	else{
+		for(var i=3;i<Math.sqrt(n);i+=2){
+			if(n%i==0){
+				flag=false;
+				break;
+			}
+		}
+	}
+	return flag;
+}	
+function print_SoSu(){
+	var number=document.getElementById("number").value;
+	number = parseInt(number);
+	
+	var html='';
+	for(var i=1;i<=number; i++){
+		if(check_sosu(i)){
+		html+=i+'</br>';
+		}
+	}
+	document.getElementById("result").innerHTML=html;		
+}
+</script>
+
+<h2>Bai 3</h2>
+<div>Thẻ thứ 1</div>
+<div>Thẻ thứ 2</div>
+<div>Thẻ thứ 3</div>
+<div>Thẻ thứ 4</div>
+<div>Thẻ thứ 5</div>
+<div>Thẻ thứ 6</div>
+<div>Thẻ thứ 7</div>
+<div>Thẻ thứ 8</div>
+<div>Thẻ thứ 9</div>
+<div>Thẻ thứ 10</div>
+<button onclick="change_background()">CHANGE BACKGROUND</button>
+
+<style type="text/css">
+	div{
+		padding:10px;
+		margin:5px;
+	}
+</style>
+<script>
+function change_background(){
+	var divs=document.getElementsByTagName("div");
+	for(var i=0;i<divs.length;i++){
+		if((i+1)%2==0){
+			divs[i].style.background="red";
+		}else{
+			divs[i].style.background="blue";
+		}
+		
+	}
+}
+</script>
+
+</body>
+</html>

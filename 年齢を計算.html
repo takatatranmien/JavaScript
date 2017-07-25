@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<h3>Your birth year is? </h3></br>
+
+<input type=text id="y" value="" size=5></br>
+<input type=button value="年齢を計算 " onClick="your_age()"></br></br>
+
+<script>
+function your_age(){
+	var D=new Date();
+	var BirthYear = document.getElementById("y").value;
+	BirthYear = parseInt(BirthYear);
+	var Year = D.getFullYear();
+	document.write("今年は "+getFullYear+'<br>');
+	document.write("Your age is : "+(Year-BirthYear));
+}
+</script>
+
+
+  <script language="javascript">
+            var mang = ["học", "lập", "Ârình", "Aai", "freetuts.net","1"];
+            document.write(mang.valueOf());
+            document.write('<br/>');
+            mang.shift();
+			
+            // Sắp xếp lại
+            mang.sort();
+            document.write(mang.valueOf());
+        </script>
+<script language="javascript">
+	string = "Welcome freetuts.net";
+	document.write('<br/>');
+	document.write(string.split(" ").length);
+    document.write('<br/>');
+
+</script>
+</body>
+</html>

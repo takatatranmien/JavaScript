@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+    <body>
+      <form method="post" action="">
+		  UserName:<input type="text" value="" name="username" id="username"/><br/>
+		  PassWord:<input type="text" value="" name="password" id="password"/><br/>	
+		  RePassWord:<input type="text" value="" name="re-password" id="re-password"/><br/>
+		  <input type="submit" value="Register" onclick="return validate()"/> 
+      </form>
+	  <script language="JavaScript">
+		  function validate(){
+			var username=document.getElementById("username").value;
+			var password=document.getElementById("password").value;
+			var re$password=document.getElementById("re-password").value;
+			
+			if(username===""){
+				alert("UserNameを入力して下さい");
+				return false;
+			}
+			if(password===""){
+				alert("passwordを入力して下さい");
+				return false;
+			}
+			if(re$password!=password){
+				alert("repassword&passwordは同じじゃない");
+				return false;
+			}
+			return true;
+		  }
+	  </script>
+    </body>
+</html>

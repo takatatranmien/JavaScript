@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<script>
+function deleteDIV(){
+	var elements=document.getElementsByTagName('div');
+	var elements_remove=[];
+	var index;
+	for(index=1;index<elements.length;index++){
+		elements[index].remove();
+	}
+	
+//	while(index<elements.length){
+//		if(index%2!=0&&index!=0){
+//			elements_remove.push(elements[index]);
+//		}
+//		index++;
+//	}
+//	for(index=0; index<elements_remove.length;index++){
+//		elements_remove[index].remove();
+//	}	
+}
+</script>
+
+<div>THE 1</div>
+<div>THE 2</div>
+<div>THE 3</div>
+<div>THE 4</div>
+<div>THE 5</div>
+<div>THE 6</div>
+<div>THE 7</div>
+<div>THE 8</div>
+<div>THE 9</div>
+<div>THE 10</div>
+
+<button onclick="deleteDIV()">REMOVE</button>
+</body>
+</html>

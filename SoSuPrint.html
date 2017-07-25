@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<p>限定ナンバーinput:</p>
+<input type=text id="number" value="" size=30></br><br>
+<B><input type=button name=input value="PRINT" onclick="Print_SoSu()"><B><br>
+
+<div id="result">
+ 
+</div>
+
+<script language="JavaScript">
+function Print_SoSu(){
+	var number = document.getElementById("number").value;
+	number = parseInt(number);
+	if (number===1)
+		document.getElementById("result").innerHTML +="<br>　>=2整数を入力して下さい　！<br>" ;
+	else
+		document.getElementById("result").innerHTML +="<br>　素数配列は:<br>" ;
+	
+	for(var i=1; i<=number; i++){
+		if(SoSu_Check(i)){
+		document.getElementById("result").innerHTML += ' '+i;
+		}
+	}
+}
+function SoSu_Check(n){
+	//var flag=true;
+	if(n<2){
+//		flag = false;
+		return false;
+	}
+	else if(n===2){
+//		flag = true;
+		return true;
+	}
+	else if(n%2===0){
+//		flag = false;
+		return false;
+	}
+	else {
+		for(var i=3;i<=Math.sqrt(n);i+=2){
+			if(n%i===0){
+//				flag= false;
+				return false;
+				break;
+			}
+		}
+	}
+	return true;
+}
+</script>
+</body>
+</html>

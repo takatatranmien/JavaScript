@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+<form method="get" action=""> 
+	Nhap so:<input type="text" id="number" value="0"/>
+	<input type="button" value="In Ket Qua" 
+	onclick="print_number()"/>
+</form>
+<div id="result">
+
+</div>
+<script>
+function print_number(){
+	var number=document.getElementByID("number").value;
+	number=parseInt(number);
+	
+	var html='';
+	for(var i=1;i<number;i++){
+		html+=i+'<br/>';
+	}
+	document.getElementByID("result").innerHTML=html;
+}
+</script>
+</body>
+</html>

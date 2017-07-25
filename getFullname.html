@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+	span{
+		color:blue;
+	}
+</style>
+</head>
+<body>
+<div>Ho:<span id="demo1"></span></div>
+<div>Ten:<span id="demo2"></span></div>
+<div>fullname:<span id="demo3"></span></div>
+
+<script LANGUAGE= "JavaScript">
+var sinhvien={
+	firstname:" Nguyen",
+	lastname:" Nam",
+	fullname:function(){
+		return (this.firstname+this.lastname);
+	}
+};
+	//document.write("ten day du la: "+fullname());
+    document.getElementById("demo1").innerHTML = sinhvien.firstname;
+    document.getElementById("demo2").innerHTML = sinhvien.lastname;
+    document.getElementById("demo3").innerHTML = sinhvien.fullname();
+  </script>
+</script>
+</body>
+</html>

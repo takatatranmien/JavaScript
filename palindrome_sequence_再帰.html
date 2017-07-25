@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<p>String input:</p>
+<input type=text id="sequence" value="" size=30></br>
+<input type=button value=ＣＨＥＣＫ onclick="Palindrome()">
+
+<div id="result">
+ 
+</div>
+
+<script>
+function Palindrome(){
+	t=document.getElementById("sequence").value.split('');
+//	t=t.split("");				$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	if(Palindrome_Check(t)){
+		document.getElementById("result").innerHTML +="Well,It's a palindrome sequence!<br>" ;
+		//alert("It's a palindrome");
+	}else{
+		document.getElementById("result").innerHTML += "It's not a palindrome sequence<br>" ;
+		//alert("It's not a palindrome");
+	}
+}
+function Palindrome_Check(){
+	for(var i=0;i<=t.length/2;i++){
+		if(t[i]!=t[t.length-1-i]){
+			return false;
+			break;
+		}
+	}
+	return true;		
+}
+</script>
+</body>
+</html>

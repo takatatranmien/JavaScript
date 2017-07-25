@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ADD ELEMENT</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<script language="JavaScript">
+			function add_element(){
+				var title=document.getElementById('title').value;
+				if(title==''){
+					alert("Title nameを入力して下さい。");
+				}
+				else{
+					var html='<div style="background:blue; margin:5px; padding:5px; color:#FFF">'+title+'</div>';
+					document.getElementById('result').insertAdjacentHTML('afterend',html);
+				}
+			}
+		</script>
+    </head>
+    <body>
+        <h1>ADD ELEMENT</h1>
+
+        <input type="text" id="title" value=""/>
+        <input type="button" id="button_add" onClick="add_element()" value="Add"/>
+
+        <div id="result">
+		</div>
+    </body>
+</html>

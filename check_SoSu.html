@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form>
+            <input id="input" type="text" placeholder="Nhập vào 1 số nguyên dương ..."/>
+            <input type="button" value="Show Result" onclick="getNumber()"/>
+        </form>
+        
+
+        [removed]
+            function check(n) {
+                var check = false;
+                if (n <= 1) {
+                    check = false;
+                } else if (n == 2 || n == 3) {
+                    check = true;
+                } else if (n % 2 == 0) {
+                    check = false;
+                } else {
+                    for (var i = 3; i <= Math.sqrt(n); i += 2) {
+                        if (n % i == 0) {
+                            check = false;
+                            break;
+                        } else {
+                            check = true;
+                        }
+                    }
+                }
+                return check;
+            }
+
+            function getNumber() {
+                var num = parseInt(document.getElementById("input").value);
+                var str = "Các số nguyên tố từ 1 đến " + num + " là:" + '
+';
+                var html = '';
+
+                for (var i = 1; i <= num; i++) {
+                    if (check(i)) {
+                        html += i + ' 
+';
+                    }
+                }
+                document.getElementById("result")[removed] = str + html;
+            }
+        [removed]
+    </body>
+</html>

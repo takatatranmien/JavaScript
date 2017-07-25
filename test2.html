@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<p>番号を入力して下さい</p>
+<input type=text id="number" value="" size=30></br>
+<input type=button name=input value="プリント" onclick="Fibonacci_sequence()">
+
+<div id="result">
+ 
+</div>
+
+<script>
+function Fibonacci_sequence(n){
+	var n=document.getElementById("number").value;
+	n = parseInt(n);
+	var x=0;
+	var y=1;
+	if(x==0){
+		document.getElementById("result").innerHTML= x;
+		document.getElementById("result").innerHTML= y;
+	}else
+		while(y<=n){
+		
+		y=x+y;
+		x=y-x;
+			
+		document.getElementById("result").innerHTML= y;
+		return y; return x;
+		}
+}
+</script>
+</body>
+</html>

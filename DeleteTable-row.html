@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DELETE HTML</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+		<script language="JavaScript">
+			window.onload=function(){
+				var button=document.getElementsByTagName('input');
+				for(var i=0;i<button.length;i++){
+					button[i].addEventListener("click",function(){
+						//lay the tr
+						var parent=this.parentElement.parentElement;
+						parent.remove();
+					});
+				}
+			};	
+		</script>
+	</head>
+    <body>
+	       <h1>Delete HTML</h1>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+				<td>1</td>
+                <td>Title number 1</td>
+                <td>
+                    <input type="button" value="Delete"/>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Title number 2</td>
+                <td>
+                    <input type="button" value="Delete"/>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Title number 3</td>
+                <td>
+                    <input type="button" value="Delete"/>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Title number 4</td>
+                <td>
+                    <input type="button" value="Delete"/>
+                </td>
+            </tr>
+        </table>
+		<script>
+		</script>
+    </body>
+</html>

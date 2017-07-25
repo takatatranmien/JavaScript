@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SEARCH</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #search_advance{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Data Search</h1>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <td>Title input</td>
+                <td>
+                    <input type="text" id="title" value=""/> <br/>
+                    <a href="#" id="show_search_advance" onClick="show_search_advance()">Tìm kiếm nâng cao</a>
+                </td>
+            </tr>
+            <tr id="search_advance">
+                <td>category choice</td>
+                <td>
+                    <select id="category">
+                        <option value="1">PHP</option>
+                        <option value="2">Javascript</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" id="btn_search" value="SEARCH"/>
+                </td>
+            </tr>
+        </table>
+
+<script language="javascript">
+function show_search_advance(){
+	var a=document.getElementById('show_search_advance');
+	var category= document.getElementById('search_advance');
+	
+	var text=a.innerHTML;
+	if(text=='Tim kiem nang cao'){
+		category.style.display="table-row";
+		a.innerHTML="Bo tim kiem nang cao";
+	}else{
+		category.style.display="none";
+		a.innerHTML="Tim kiem nang cao";
+	}
+	return false;
+}
+</script>
+    </body>
+</html>

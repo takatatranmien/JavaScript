@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body onUnload="window.alert('this message appears when you go to a page!!!')">
+<form>
+	<p><input TYPE="button" value="GO" onclick="rusure();"></p>
+</form>
+<p>Click the GO to see the Example!</p>
+
+<script>
+	function rusure(){
+		question=confirm("Are you sure you want to goto that page")
+		if(question==true){
+			top.location="http://co-graph.com"
+			}
+		else{
+			alert("BYE")
+		}
+	}
+</script>
+</body>
+</html>

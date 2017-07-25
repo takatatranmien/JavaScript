@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<p>番号を入力して下さい</p>
+<input type=text id="number" value="" size=30></br>
+<input type=button name=input value="プリント" onClick="Fibonacci_sequence()">
+<div id="result">
+ 
+</div>
+
+
+<p>探したい番号を入力して下さい(Find number)</p>
+<input type=text id="number2" value="" size=30></br>
+<input type=button value="FIND" onClick="Find()">
+<div id="result2">
+ 
+</div>
+
+
+<script>
+var a=[];
+var i=1;
+function Fibonacci_sequence(){
+	var n=document.getElementById("number").value;
+	n = parseInt(n);
+	
+	if(n===0)document.getElementById("result").innerHTML += ' ' + 0;
+	var x=0;
+	var y=1;
+	
+	while(y<=n){
+		if(x===0){
+			document.getElementById("result").innerHTML += ' ' + x;
+			document.getElementById("result").innerHTML += ' ' + y;			
+			a[0]=x;
+			a[1]=y;
+		}
+		y=x+y;
+		x=y-x;
+		if(y<=n){
+			i++;
+			document.getElementById("result").innerHTML += ' ' + y;		
+			a[i]=y;			
+		}
+	}
+	document.getElementById("result").innerHTML +='<br>';
+}
+
+function Find(){
+	
+	var n2=document.getElementById("number2").value;
+	n2 = parseInt(n2);
+	for(var i=0; i<a.length;i++){
+		if(a[i]==n2){
+			document.getElementById("result2").innerHTML +="探したい番号（"+n2+"）があります,<br>配列の中で番号の位置は： " + i+" 番目です。";	
+		}
+	}
+	/*
+	for(var i=0; i< a.length; i++){
+		if(a[i]==n){
+			document.getElementById("result2").innerHTML 
+			= document.getElementById("result2").innerHTML + ' '+"探したい番号があります：" + a[i]+"番."+" 位置は"+ (i+1) +"番目である";	
+		}
+	}
+	*/
+}
+</script>
+</body>
+</html>
